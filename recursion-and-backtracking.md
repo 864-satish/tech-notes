@@ -1,4 +1,4 @@
-## Recursion and backtracking 
+## Recursion and Backtracking
 Recursion and backtracking are both important concepts in computer science, and while they are closely related, they are used to solve different types of problems and have distinct characteristics.
 Here's a detailed explanation of each:
 
