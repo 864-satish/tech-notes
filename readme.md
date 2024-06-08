@@ -9,4 +9,8 @@
 1. [Node js debugging and profiling](node-js/nodejs-debugging.md)
 2. [Debugging memory leaks in node](node-js/memory-leak.md)
 
+#### Programming Languages
+1. [Java Basics](languages/java.md)
+2. [TypeScript Basics](languages/typescript.md)
+3. [Python Basics](languages/python.md)
 #### System design
