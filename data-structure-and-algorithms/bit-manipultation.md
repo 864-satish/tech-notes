@@ -1,9 +1,9 @@
-# Bit manipulation
+# 📖 Bit manipulation
 
 #### All explanation are on 4-bit representation [N = 4]
 
 
-## Common Bitwise operations
+## 🚀 Common Bitwise operations
 
 1. `AND (&)`: AND on each bits; Example: `1101 & 1011 = 1001`.
 
@@ -16,7 +16,7 @@
 5. `NAND`: AND then Negates the result; Example: `1101 & 1011 = 1001, then ~1001 = 0110`.
 
 
-## Understanding the operations manually with examples
+## 🚀 Understanding the operations manually with examples
 
 1. `0110 + 0110 = 0110 * 2 => 1100` equivalent to shifting left by 1 (`num << 1`)
 2. `0100 * 0011 = 4 * 0011 => 1100` equivalent to shifting left by 2 (`num << 2`)
@@ -24,19 +24,19 @@
 4. `1011 & (~0 << 2) = 1000` ~0  negating series of zeros = 1111 and then left shift by 2 and performing AND will clear the last 2 bits.
 
 
-## Bit Facts and Tricks [performing operation on a]
+## 🚀 Bit Facts and Tricks [performing operation on a]
 
 ```bash
 a ^ 0s = a          a & 0s = 0          a | 0s = a
 a ^ 1s = ~a         a & 1s = a          a | 1s = 1s
 a ^ a = 0           a & a = a           a | a = a
 ```
-## Two's compliment and Negative numbers
+## 🚀 Two's compliment and Negative numbers
 - 2's compliment of a = 2<sup>N</sup> - a
 - Most significatn bit represent sign of number [1 = negative, 0 = positive]
 - -a can be represented as concat(1, 2<sup>N</sup> - a)
 
-## Arithmetic `[>>]` and Logical `[>>>]` right shift
+## 🚀 Arithmetic `[>>]` and Logical `[>>>]` right shift
 1. Arithmetic right shifts the value but put the SIGN bit at most significant plac
    It has rougly the value devided by 2.
    Example:  -75 >> 1 = -38
@@ -44,7 +44,7 @@ a ^ a = 0           a & a = a           a | a = a
 2. Logical right shifts the value and puts the ZERO at most significant place.
     Example -75 >>> 1 = 90
 
-## Common Bit tasks | Getting, Setting bit from a number num
+## 🚀 Common Bit tasks | Getting, Setting bit from a number num
 
 - **Get** i<sup>th</sup> bit = `num & (1 << i) != 0`
 - **Set** i<sup>th</sup> bit = `num | (1 << i)`

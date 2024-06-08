@@ -1,5 +1,5 @@
-## Memory leaks in NodeJs: causes and way ahead
-### Types of memoery leaks
+# 📖 Memory leaks in NodeJs: causes and way ahead
+## 🚀 Types of memoery leaks
 1. Javascript leaks
 2. Native leaks
 3. System level leaks
@@ -32,7 +32,7 @@ Common practices to avoid javascript memory leaks
 ref: [YouTube: Node offial memeory leak talk](https://www.youtube.com/watch?v=hliOMEQRqf8)
 
 
-### Tools and commands to debug memory leak
+## 🚀 Tools and commands to debug memory leak
 
 - Using garbage collector
     ```node --gc_trace node app.js```
@@ -67,8 +67,8 @@ ref: [YouTube: Node offial memeory leak talk](https://www.youtube.com/watch?v=hl
     ```
 
 
-### Load / ab testing node applicatioon
-#### Using apache benchmark: ab
+## 🚀 Load / ab testing node applicatioon
+### Using apache benchmark: ab
 - Avaialble comand
     ```
     load test: ab -k -c200 -10000000 http://localhost:8080/ 
@@ -79,7 +79,7 @@ ref: [YouTube: Node offial memeory leak talk](https://www.youtube.com/watch?v=hl
     - -n10000000: Set request load [10 million request will be made]
 
 
-### Module avaialble for debugging memeory leaks
+## 🚀 Module avaialble for debugging memeory leaks
 1. memeoryUsage
 
     e.g 

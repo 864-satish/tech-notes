@@ -1,7 +1,7 @@
 # TypeScript Basics
 TypeScript is a strongly-typed superset of JavaScript that compiles to plain JavaScript.
 
-### Data Types in TypeScript
+## 🚀 Data Types in TypeScript
 1. **Primitive Types**: Represent single values and include:
    - `number`: Represents numeric values.
    - `string`: Represents text.
@@ -20,7 +20,7 @@ let undef: undefined = undefined;
 let sym: symbol = Symbol("key");
 ```
 
-### TypeScript Collections and Classes Initialization
+## 🚀 TypeScript Collections and Classes Initialization
 
 - Array
 
@@ -58,7 +58,7 @@ mapExample.set("apple", 1);
     delete(value): Removes a value from the set.
     has(value): Checks if a value exists in the set.
 ```
-### Access Modifiers in TypeScript
+## 🚀 Access Modifiers in TypeScript
 
 Access modifiers control the visibility and accessibility of class members.
 
@@ -84,5 +84,5 @@ class AccessModifiersExample {
 
 The default access modifier in TypeScript is public.
 
-### Summary
+## 🚀 Summary
 TypeScript provides static typing and additional features over JavaScript, making it suitable for large-scale application development.

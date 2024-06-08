@@ -1,7 +1,7 @@
-# Java Basics
+# 📖 Java Basics
 Java is an object-oriented, class-based, concurrent, secured and general-purpose computer-programming language.
 
-### Data Types in Java
+## 🚀 Data Types in Java
 1. Primitive [8]: Predefined by the language and are not objects.
 ```java
 byte: 8-bit signed integer. Range: -128 to 127.
@@ -34,7 +34,7 @@ public class DataTypesExample {
 }
 ```
 
-### Java Collections and Classes Initialization 
+## 🚀 Java Collections and Classes Initialization 
 Common Java collections, classes and List of methods available in them.
 
 - Integer 
@@ -288,7 +288,7 @@ priorityQueueExample.add("Apple");
 
 These methods provide a comprehensive toolkit for working with these collections and classes in Java.
 
-### Access Modifiers in Java
+## 🚀 Access Modifiers in Java
 Access modifiers in Java determine the visibility and accessibility of classes, methods, and other members.
 Java provides 4 primary access modifiers:
 - Public: Accessible from any other class.
@@ -358,5 +358,587 @@ This table summarizes the accessibility of members with different access modifie
 
 Understanding these access modifiers allows you to design your classes with proper encapsulation and control over access to class members.
 
-### Glossary
+## 🚀 Object-Oriented Programming (OOP) Concepts 
+
+- Classes : A class is like a blueprint for creating objects. 
+- Objects : An object is an instance of a class.
+
+**Example**: Consider a Car class that defines the properties and behaviors of a car.
+
+Example:
+
+java
+
+public class Car {
+    // Fields (properties)
+    String brand;
+    String model;
+    int year;
+
+    // Constructor
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method (behavior)
+    public void displayInfo() {
+        System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year);
+    }
+
+    // Main method to create an object and call its method
+    public static void main(String[] args) {
+        Car car1 = new Car("Toyota", "Camry", 2020);
+        car1.displayInfo();  // Outputs: Brand: Toyota, Model: Camry, Year: 2020
+    }
+}
+
+Inheritance
+
+Inheritance allows a class (child class) to inherit properties and methods from another class (parent class).
+
+Real-Life Example:
+
+Consider Vehicle as a parent class and Car and Bike as child classes.
+
+Example:
+
+java
+
+// Parent class
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle is starting.");
+    }
+
+    void stop() {
+        System.out.println("Vehicle is stopping.");
+    }
+}
+
+// Child class
+class Car extends Vehicle {
+    void openTrunk() {
+        System.out.println("Opening the car trunk.");
+    }
+
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.start();  // Inherited method
+        car.openTrunk();  // Car-specific method
+        car.stop();  // Inherited method
+    }
+}
+
+Polymorphism
+
+Polymorphism allows methods to do different things based on the object it is acting upon. It can be achieved by method overriding (runtime polymorphism) and method overloading (compile-time polymorphism).
+
+Real-Life Example:
+
+Different animals make different sounds.
+
+Example:
+
+java
+
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound.");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+public class PolymorphismExample {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+
+        myDog.makeSound();  // Outputs: Bark
+        myCat.makeSound();  // Outputs: Meow
+    }
+}
+
+Encapsulation
+
+Encapsulation is the concept of wrapping the data (variables) and code (methods) together as a single unit, and restricting access to some of the object's components.
+
+Real-Life Example:
+
+Consider a BankAccount class with private fields and public getter and setter methods.
+
+Example:
+
+java
+
+public class BankAccount {
+    // Private fields
+    private String accountNumber;
+    private double balance;
+
+    // Constructor
+    public BankAccount(String accountNumber, double balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    // Getter and setter methods
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("123456789", 1000.0);
+        account.deposit(500.0);
+        account.withdraw(200.0);
+        System.out.println("Account Number: " + account.getAccountNumber());
+        System.out.println("Balance: " + account.getBalance());
+    }
+}
+
+Abstraction
+
+Abstraction is the concept of hiding the implementation details and showing only the functionality to the user.
+
+Real-Life Example:
+
+Consider an AbstractClass for a template and a concrete class that implements the abstract methods.
+
+Example:
+
+java
+
+abstract class Vehicle {
+    // Abstract method (does not have a body)
+    abstract void fuelType();
+
+    // Regular method
+    void start() {
+        System.out.println("Vehicle is starting.");
+    }
+}
+
+class Car extends Vehicle {
+    // Implementing the abstract method
+    void fuelType() {
+        System.out.println("Car runs on petrol.");
+    }
+
+    public static void main(String[] args) {
+        Vehicle myCar = new Car();
+        myCar.start();  // Outputs: Vehicle is starting.
+        myCar.fuelType();  // Outputs: Car runs on petrol.
+    }
+}
+
+Day 7: Exception Handling and File I/O
+Exception Handling
+
+Exception handling is a mechanism to handle runtime errors, allowing the program to continue execution.
+
+Real-Life Example:
+
+Consider handling an array out-of-bounds exception.
+
+Example:
+
+java
+
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+        try {
+            int[] array = new int[5];
+            System.out.println(array[5]);  // This will throw an ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index is out of bounds!");
+        } finally {
+            System.out.println("This block always executes.");
+        }
+    }
+}
+
+File I/O
+
+File I/O involves reading from and writing to files.
+
+Real-Life Example:
+
+Reading from a file and writing to a file.
+
+Example: Reading a file:
+
+java
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReadingExample {
+    public static void main(String[] args) {
+        try (BufferedReader br = new BufferedReader(new FileReader("example.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Example: Writing to a file:
+
+java
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWritingExample {
+    public static void main(String[] args) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("example.txt"))) {
+            bw.write("Hello, world!");
+            bw.newLine();
+            bw.write("This is a new line.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Summary
+
+    Day 6 covers the basics of OOP in Java: classes, objects, inheritance, polymorphism, encapsulation, and abstraction with real-life examples.
+
+## 🚀 Object-Oriented Programming (OOP) Concepts
+Real-Life Example:
+Imagine you are modeling a library system. A Book class represents books in the library.
+
+Example:
+
+java
+
+public class Book {
+    // Fields (properties)
+    String title;
+    String author;
+    int yearPublished;
+
+    // Constructor
+    public Book(String title, String author, int yearPublished) {
+        this.title = title;
+        this.author = author;
+        this.yearPublished = yearPublished;
+    }
+
+    // Method (behavior)
+    public void displayInfo() {
+        System.out.println("Title: " + title + ", Author: " + author + ", Year Published: " + yearPublished);
+    }
+
+    // Main method to create an object and call its method
+    public static void main(String[] args) {
+        Book book1 = new Book("1984", "George Orwell", 1949);
+        book1.displayInfo();  // Outputs: Title: 1984, Author: George Orwell, Year Published: 1949
+    }
+}
+
+In this example, Book is a class with properties like title, author, and yearPublished, and a method displayInfo() to display book details. The main method creates an instance of Book and calls the displayInfo() method.
+Inheritance
+
+Inheritance allows a class to inherit the properties and methods of another class.
+
+Real-Life Example:
+Consider a library system where Media is a parent class, and Book and DVD are child classes.
+
+Example:
+
+java
+
+// Parent class
+class Media {
+    String title;
+    int yearPublished;
+
+    // Constructor
+    public Media(String title, int yearPublished) {
+        this.title = title;
+        this.yearPublished = yearPublished;
+    }
+
+    // Method
+    public void displayInfo() {
+        System.out.println("Title: " + title + ", Year Published: " + yearPublished);
+    }
+}
+
+// Child class
+class Book extends Media {
+    String author;
+
+    // Constructor
+    public Book(String title, String author, int yearPublished) {
+        super(title, yearPublished);
+        this.author = author;
+    }
+
+    // Method
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Author: " + author);
+    }
+
+    public static void main(String[] args) {
+        Book book = new Book("1984", "George Orwell", 1949);
+        book.displayInfo();  // Outputs: Title: 1984, Year Published: 1949, Author: George Orwell
+    }
+}
+
+// Child class
+class DVD extends Media {
+    String director;
+
+    // Constructor
+    public DVD(String title, String director, int yearPublished) {
+        super(title, yearPublished);
+        this.director = director;
+    }
+
+    // Method
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Director: " + director);
+    }
+
+    public static void main(String[] args) {
+        DVD dvd = new DVD("Inception", "Christopher Nolan", 2010);
+        dvd.displayInfo();  // Outputs: Title: Inception, Year Published: 2010, Director: Christopher Nolan
+    }
+}
+
+Here, Book and DVD classes inherit the properties and methods from the Media class. This means Book and DVD classes can use and override the methods of Media.
+Polymorphism
+
+Polymorphism allows methods to do different things based on the object it is acting upon.
+
+Real-Life Example:
+In a library system, different types of media (books, DVDs) have a common method to display information.
+
+Example:
+
+java
+
+class Media {
+    String title;
+    int yearPublished;
+
+    // Constructor
+    public Media(String title, int yearPublished) {
+        this.title = title;
+        this.yearPublished = yearPublished;
+    }
+
+    // Method
+    public void displayInfo() {
+        System.out.println("Title: " + title + ", Year Published: " + yearPublished);
+    }
+}
+
+class Book extends Media {
+    String author;
+
+    public Book(String title, String author, int yearPublished) {
+        super(title, yearPublished);
+        this.author = author;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Author: " + author);
+    }
+}
+
+class DVD extends Media {
+    String director;
+
+    public DVD(String title, String director, int yearPublished) {
+        super(title, yearPublished);
+        this.director = director;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Director: " + director);
+    }
+}
+
+public class PolymorphismExample {
+    public static void main(String[] args) {
+        Media book = new Book("1984", "George Orwell", 1949);
+        Media dvd = new DVD("Inception", "Christopher Nolan", 2010);
+
+        book.displayInfo();  // Outputs: Title: 1984, Year Published: 1949, Author: George Orwell
+        dvd.displayInfo();   // Outputs: Title: Inception, Year Published: 2010, Director: Christopher Nolan
+    }
+}
+
+In this example, displayInfo() is called on different types of Media objects (book and DVD), and the correct version of the method is executed based on the actual object type.
+Encapsulation
+
+Encapsulation is the mechanism of wrapping the data (fields) and methods (code) together as a single unit and restricting access to some of the object's components.
+
+Real-Life Example:
+In a banking system, a BankAccount class encapsulates the details of a bank account.
+
+Example:
+
+java
+
+public class BankAccount {
+    // Private fields
+    private String accountNumber;
+    private double balance;
+
+    // Constructor
+    public BankAccount(String accountNumber, double balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    // Getter and setter methods
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("123456789", 1000.0);
+        account.deposit(500.0);
+        account.withdraw(200.0);
+        System.out.println("Account Number: " + account.getAccountNumber());
+        System.out.println("Balance: " + account.getBalance());  // Outputs: Balance: 1300.0
+    }
+}
+
+In this example, the BankAccount class encapsulates the account number and balance fields. The fields are private and can only be accessed through public getter and setter methods.
+Abstraction
+
+Abstraction is the concept of hiding the implementation details and showing only the functionality to the user.
+
+Real-Life Example:
+In a library system, an abstract class Media defines abstract methods to be implemented by subclasses.
+
+Example:
+
+java
+
+abstract class Media {
+    String title;
+    int yearPublished;
+
+    // Constructor
+    public Media(String title, int yearPublished) {
+        this.title = title;
+        this.yearPublished = yearPublished;
+    }
+
+    // Abstract method
+    abstract void displayInfo();
+
+    // Regular method
+    void start() {
+        System.out.println("Starting media.");
+    }
+}
+
+class Book extends Media {
+    String author;
+
+    public Book(String title, String author, int yearPublished) {
+        super(title, yearPublished);
+        this.author = author;
+    }
+
+    @Override
+    void displayInfo() {
+        System.out.println("Title: " + title + ", Year Published: " + yearPublished + ", Author: " + author);
+    }
+}
+
+class DVD extends Media {
+    String director;
+
+    public DVD(String title, String director, int yearPublished) {
+        super(title, yearPublished);
+        this.director = director;
+    }
+
+    @Override
+    void displayInfo() {
+        System.out.println("Title: " + title + ", Year Published: " + yearPublished + ", Director: " + director);
+    }
+}
+
+public class AbstractionExample {
+    public static void main(String[] args) {
+        Media book = new Book("1984", "George Orwell", 1949);
+        Media dvd = new DVD("Inception", "Christopher Nolan", 2010);
+
+        book.displayInfo();  // Outputs: Title: 1984, Year Published: 1949, Author: George Orwell
+        dvd.displayInfo();   // Outputs: Title: Inception, Year Published: 2010, Director: Christopher Nolan
+    }
+}
+
+Here, the Media class is abstract and defines an abstract method displayInfo(). Subclasses Book and DVD implement this method, providing specific behavior for each type of media.
+
+## 🚀 Glossary
 - JPA (Java Persistence API), Hibernate, JDBC, POJO

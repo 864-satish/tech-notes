@@ -1,8 +1,8 @@
-## Recursion and Backtracking
+# 📖 Recursion and Backtracking
 Recursion and backtracking are both important concepts in computer science, and while they are closely related, they are used to solve different types of problems and have distinct characteristics.
 Here's a detailed explanation of each:
 
-### Recursion
+## 🚀 Recursion
 **Definition**: Recursion is a technique in which a function calls itself directly or indirectly to solve a problem.
 Each recursive call works on a smaller instance of the same problem until it reaches a base case, which stops the recursion.
 
@@ -24,7 +24,7 @@ function factorial(n) {
 console.log(factorial(5)); // Output: 120
 ```
 
-### Backtracking
+## 🚀 Backtracking
 
 **Definition:** Backtracking is an algorithmic technique for solving problems incrementally by trying partial solutions and then abandoning them if they are not suitable (i.e., if they do not lead to a valid solution). It is often used in combination with recursion.
 
@@ -75,7 +75,7 @@ console.log(solveNQueens(4));
 
 ```
 
-### Differences between Recursion and Backtracking
+## 🚀 Differences between Recursion and Backtracking
 
 - Nature: Recursion is a general problem-solving technique, while backtracking is a specific algorithmic technique often implemented using recursion.
 - Purpose: Recursion simplifies a problem by breaking it into smaller subproblems, while backtracking is used to solve constraint satisfaction problems by exploring possible solutions and abandoning paths that do not lead to valid solutions.

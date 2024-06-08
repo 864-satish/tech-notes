@@ -1,7 +1,7 @@
-# Python Basics
+# 📖 Python Basics
 Python is a high-level programming language known for its simplicity and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
 
-### Data Types in Python
+## 🚀 Data Types in Python
 1. **Numeric Types**: Integers, floating-point numbers, and complex numbers.
 ```python
 int_var = 10
@@ -157,7 +157,7 @@ zfill(width)
 
 - Python's collections and methods offer versatile tools for data manipulation and processing.
 
-### Access Modifiers in Python
+## 🚀 Access Modifiers in Python
 
 Python does not have traditional access modifiers like Java. Instead, it uses naming conventions and language features to indicate member visibility.
 
