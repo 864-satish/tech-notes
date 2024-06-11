@@ -81,4 +81,5 @@ console.log(solveNQueens(4));
 - Purpose: Recursion simplifies a problem by breaking it into smaller subproblems, while backtracking is used to solve constraint satisfaction problems by exploring possible solutions and abandoning paths that do not lead to valid solutions.
 - State Management: Backtracking explicitly involves keeping track of the state and undoing decisions (backtracking), whereas recursion involves breaking down problems without necessarily backtracking.
 
-In summary, recursion is a method of solving problems by breaking them into smaller subproblems, while backtracking is a specific technique that uses recursion to explore possible solutions and abandon them when they are not feasible.
+## summary
+- Recursion is a method of solving problems by breaking them into smaller subproblems, while backtracking is a specific technique that uses recursion to explore possible solutions and abandon them when they are not feasible.
