@@ -37,7 +37,7 @@
 3. [Python Basics](languages/python.md)
 
 ### 🚀 Database
-1. [PostgreSQL Basics](databse/postgresql.md)
+1. [PostgreSQL Basics](database/postgresql.md)
 
 ### 🚀 System Design
 1. #### LLD (Low-Level Design)
