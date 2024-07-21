@@ -36,6 +36,9 @@
 2. [TypeScript Basics](languages/typescript.md)
 3. [Python Basics](languages/python.md)
 
+### 🚀 Database
+1. [PostgreSQL Basics](databse/postgresql.md)
+
 ### 🚀 System Design
 1. #### LLD (Low-Level Design)
     1. Lift Design

@@ -150,6 +150,7 @@ hashMapExample.put("Apple", 1);
     clear()
     containsKey(Object key)
     containsValue(Object value)
+    getOrDefault(key, 0)
     entrySet()
     get(Object key)
     isEmpty()
