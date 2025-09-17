@@ -2,6 +2,7 @@
 ## **Content**
 
 ### 🚀 DSA [Data Structure and Algorithms]
+0. [Topic wise brief algorithms](data-structure-and-algorithms/algorithms.md)
 1. [Bit manipulation](data-structure-and-algorithms/bit-manipultation.md)
 2. [Recursion and Backtracking](data-structure-and-algorithms/recursion-and-backtracking.md)
 3. [Dynamic Programming](data-structure-and-algorithms/dynamic-programming.md)
